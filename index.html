@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EyeCandy Skateboarding — Fall 2026 Zine & Catalog</title>
+<meta name="author" content="Sahr Rashid-Noah">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Rokkitt:wght@400;600;700;800;900&family=Work+Sans:wght@500;700;900&display=swap" rel="stylesheet">
+
+<style>
+/* =====================================================================
+   EYECANDY VISUAL DESIGN STUDIO — FALL 2026 SKATE CATALOG
+   Art Direction & Design: Sahr Rashid-Noah
+   Editorial Skate Zine on White Paper with Red Accents & Sutro Typography
+   ===================================================================== */
+:root {
+  --red: #e21b23;
+  --red-bg: #e21b23;
+  --paper: #faf8f5;
+  --white: #ffffff;
+  --black: #111111;
+  --ink: #191919;
+  --soft-ink: #4a4a4a;
+  --muted: #767676;
+  --border: #dfdcd5;
+  --rule: #111111;
+  --tan: #f1ede4;
+  --fall-orange: #d9531e;
+  --fall-amber: #e89e24;
+  --font-slab: "Sutro", "Rokkitt", "Rockwell", "Clarendon", serif;
+  --font-typewriter: "Courier Prime", "Courier New", monospace;
+  --font-sans: "Work Sans", -apple-system, sans-serif;
+  --line: .55cqw;
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #ece8df;
+  color: var(--ink);
+  font-family: var(--font-typewriter);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--red);
+  color: #fff;
+}
+
+/* ---------- Top Bar ---------- */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #ffffff;
+  border-bottom: 2px solid var(--black);
+  padding: 12px clamp(16px, 3vw, 40px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-nav a {
+  color: var(--black);
+  text-decoration: none;
+  font-family: var(--font-typewriter);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.top-nav a:hover {
+  color: var(--red);
+}
+.top-nav .nav-logo {
+  height: 28px;
+  display: flex;
+  align-items: center;
+}
+.top-nav .nav-logo img {
+  height: 24px;
+  width: auto;
+}
+.top-nav .interactive-ctrls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sound-btn {
+  background: var(--paper);
+  border: 1.5px solid var(--black);
+  color: var(--black);
+  font-family: var(--font-typewriter);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all .15s ease;
+}
+.sound-btn:hover {
+  background: var(--red);
+  color: #fff;
+  border-color: var(--red);
+}
+.stamp-btn {
+  background: var(--red);
+  border: 1.5px solid var(--red);
+  color: #fff;
+  font-family: var(--font-typewriter);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: all .15s ease;
+}
+.stamp-btn:hover {
+  background: var(--black);
+  border-color: var(--black);
+}
+
+/* ---------- Spreads Container ---------- */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  padding: 24px clamp(16px, 3vw, 40px) 96px;
+}
+
+.scroll {
+  width: 100%;
+  max-width: 1400px;
+  overflow-x: auto;
+}
+
+/* 2:1 ratio book spread matching the studio book */
+.spread {
+  position: relative;
+  min-width: 900px;
+  aspect-ratio: 2 / 1;
+  container-type: inline-size;
+  background: var(--paper);
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.1), 0 20px 60px rgba(0,0,0,0.15);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+/* Center spine fold */
+.spread::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 30;
+  background: linear-gradient(90deg,
+    transparent 47.5%,
+    rgba(0,0,0,.08) 49.3%,
+    rgba(0,0,0,.22) 50%,
+    rgba(255,255,255,.3) 50.7%,
+    transparent 52.5%);
+}
+
+.spread-header-strip {
+  position: absolute;
+  top: 1.4cqw;
+  left: 2.8cqw;
+  right: 2.8cqw;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--black);
+  padding-bottom: .6cqw;
+  font-family: var(--font-typewriter);
+  font-size: .8cqw;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  z-index: 10;
+}
+.spread-header-strip span em {
+  font-style: normal;
+  color: var(--red);
+}
+
+/* =====================================================================
+   SPREAD 1: "STREET CULTURE" EDITORIAL ZINE SPREAD (User's Exact Style)
+   ===================================================================== */
+.s1 {
+  background: #ffffff;
+}
+.s1-grid {
+  position: absolute;
+  inset: 3.8cqw 2.8cqw 2.4cqw;
+  display: grid;
+  grid-template-columns: 50fr 50fr;
+  border: 2px solid var(--black);
+}
+
+/* Left Page: Off-white newsprint with "STREET" title */
+.s1-left {
+  background: var(--paper);
+  border-right: 2px solid var(--black);
+  padding: 2.5cqw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.s1-title-huge {
+  font-family: var(--font-slab);
+  font-size: 7.2cqw;
+  font-weight: 900;
+  line-height: .85;
+  letter-spacing: -.03em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin: 0;
+}
+
+.s1-photo-zone {
+  margin: 1.5cqw 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: 60fr 40fr;
+  gap: 1.4cqw;
+  align-items: end;
+}
+.s1-photo-zone img {
+  width: 100%;
+  height: 18cqw;
+  object-fit: cover;
+  border: 1.5px solid var(--black);
+  filter: contrast(1.1);
+}
+
+/* Red 1990s Callout Box */
+.box-1990s {
+  background: var(--red);
+  color: #fff;
+  padding: 1.2cqw 1.4cqw;
+  border: 2px solid var(--black);
+  box-shadow: 4px 4px 0px var(--black);
+  margin-top: -3cqw;
+  position: relative;
+  z-index: 5;
+}
+.box-1990s h3 {
+  font-family: var(--font-slab);
+  font-size: 2.2cqw;
+  margin: 0 0 .4cqw;
+  line-height: 1;
+}
+.box-1990s p {
+  font-family: var(--font-typewriter);
+  font-size: .75cqw;
+  line-height: 1.45;
+  margin: 0;
+  letter-spacing: -.01em;
+}
+
+.s1-left-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1.5px solid var(--black);
+  padding-top: .8cqw;
+  font-size: .72cqw;
+  color: var(--soft-ink);
+}
+
+/* Right Page: Bold Red Background with "CULTURE" Title */
+.s1-right {
+  background: var(--red);
+  color: #fff;
+  padding: 2.5cqw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.s1-title-culture {
+  font-family: var(--font-slab);
+  font-size: 7.2cqw;
+  font-weight: 900;
+  line-height: .85;
+  letter-spacing: -.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+}
+
+.s1-right-content {
+  display: grid;
+  grid-template-columns: 48fr 52fr;
+  gap: 1.8cqw;
+  margin: 1.2cqw 0;
+  align-items: start;
+}
+.s1-right-text {
+  font-family: var(--font-typewriter);
+  font-size: .72cqw;
+  line-height: 1.5;
+  color: #ffffff;
+}
+.s1-right-text p {
+  margin: 0 0 .8cqw;
+}
+.s1-right-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .8cqw;
+}
+.s1-right-gallery img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 1.5px solid var(--black);
+  background: #fff;
+}
+.s1-right-gallery img:first-child {
+  grid-column: span 2;
+  aspect-ratio: 16 / 9;
+}
+
+.s1-right-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1.5px solid rgba(255,255,255,0.4);
+  padding-top: .8cqw;
+  font-size: .72cqw;
+}
+.s1-right-footer b {
+  background: #ffffff;
+  color: var(--red);
+  padding: .2cqw .6cqw;
+  font-size: .7cqw;
+}
+
+/* =====================================================================
+   SPREAD 2: COMPLETE SKATEBOARDS & AUTUMN DECK SERIES
+   ===================================================================== */
+.s2 {
+  background: #ffffff;
+}
+.s2-grid {
+  position: absolute;
+  inset: 3.8cqw 2.8cqw 2.4cqw;
+  display: grid;
+  grid-template-columns: 52fr 48fr;
+  border: 2px solid var(--black);
+}
+
+.s2-left {
+  background: #ffffff;
+  border-right: 2px solid var(--black);
+  padding: 2.5cqw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.s2-header h2 {
+  font-family: var(--font-slab);
+  font-size: 3.4cqw;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: .92;
+  margin: 0 0 .6cqw;
+  color: var(--black);
+}
+.s2-header h2 span {
+  color: var(--red);
+}
+.s2-header p {
+  font-size: .82cqw;
+  color: var(--soft-ink);
+  line-height: 1.45;
+  margin: 0 0 1cqw;
+}
+
+.complete-view-wrap {
+  position: relative;
+  background: #ffffff;
+  border: 1.5px solid var(--black);
+  overflow: hidden;
+  margin: 1cqw 0;
+}
+.complete-view-wrap img {
+  width: 100%;
+  height: 20cqw;
+  object-fit: contain;
+  display: block;
+  background: #fff;
+}
+
+/* Interactive Hotspot Pills */
+.hotspot {
+  position: absolute;
+  background: var(--red);
+  color: #fff;
+  font-family: var(--font-typewriter);
+  font-size: .65cqw;
+  font-weight: 700;
+  padding: .3cqw .7cqw;
+  border: 1px solid var(--black);
+  box-shadow: 2px 2px 0 var(--black);
+  cursor: pointer;
+  transition: transform .15s ease;
+}
+.hotspot:hover {
+  transform: scale(1.1);
+  background: var(--black);
+}
+.hs-deck { top: 22%; left: 16%; }
+.hs-truck { top: 52%; left: 34%; }
+.hs-wheel { bottom: 20%; right: 28%; }
+
+.specs-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1cqw;
+  border-top: 1.5px solid var(--black);
+  padding-top: 1cqw;
+}
+.spec-box {
+  background: var(--tan);
+  border: 1px solid var(--border);
+  padding: .6cqw .8cqw;
+}
+.spec-box small {
+  display: block;
+  font-size: .62cqw;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.spec-box b {
+  font-size: .8cqw;
+  color: var(--black);
+}
+
+.s2-right {
+  background: var(--paper);
+  padding: 2.5cqw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.deck-autumn-feature {
+  position: relative;
+  border: 1.5px solid var(--black);
+  overflow: hidden;
+}
+.deck-autumn-feature img {
+  width: 100%;
+  height: 17cqw;
+  object-fit: cover;
+  display: block;
+}
+
+.deck-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .78cqw;
+  margin: 1cqw 0;
+}
+.deck-list-table th {
+  text-align: left;
+  border-bottom: 2px solid var(--black);
+  padding: .4cqw 0;
+  font-family: var(--font-slab);
+  font-size: .9cqw;
+}
+.deck-list-table td {
+  padding: .5cqw 0;
+  border-bottom: 1px solid var(--border);
+}
+.deck-list-table td:first-child {
+  font-weight: 700;
+  color: var(--red);
+}
+.deck-list-table td:last-child {
+  text-align: right;
+  font-family: var(--font-typewriter);
+}
+
+/* =====================================================================
+   SPREAD 3: HARDWARE, WHEELS, & LIFESTYLE LOOKBOOK
+   ===================================================================== */
+.s3 {
+  background: #ffffff;
+}
+.s3-grid {
+  position: absolute;
+  inset: 3.8cqw 2.8cqw 2.4cqw;
+  display: grid;
+  grid-template-columns: 46fr 54fr;
+  border: 2px solid var(--black);
+}
+
+/* Left Page: Hardware Detail & Wheel Product Shot */
+.s3-left {
+  background: var(--paper);
+  border-right: 2px solid var(--black);
+  padding: 2.5cqw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.s3-left h2 {
+  font-family: var(--font-slab);
+  font-size: 2.8cqw;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0 0 .5cqw;
+  color: var(--black);
+}
+.s3-left h2 span { color: var(--red); }
+
+.hardware-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2cqw;
+  margin: 1cqw 0;
+}
+.hw-card {
+  background: #ffffff;
+  border: 1.5px solid var(--black);
+  padding: .8cqw;
+}
+.hw-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  display: block;
+}
+.hw-card b {
+  display: block;
+  font-family: var(--font-slab);
+  font-size: 1cqw;
+  margin-top: .6cqw;
+  color: var(--black);
+}
+.hw-card span {
+  display: block;
+  font-size: .7cqw;
+  color: var(--muted);
+}
+
+.tech-callout {
+  background: var(--red);
+  color: #fff;
+  padding: .8cqw 1cqw;
+  border: 1.5px solid var(--black);
+  box-shadow: 3px 3px 0 var(--black);
+  font-size: .75cqw;
+  line-height: 1.4;
+}
+
+/* Right Page: Sage & Sean Flash Ad on White Matting */
+.s3-right {
+  background: #ffffff;
+  padding: 2.5cqw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ad-matting {
+  border: 2px solid var(--black);
+  position: relative;
+  overflow: hidden;
+  height: 21cqw;
+}
+.ad-matting img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.colophon-white {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 2px solid var(--black);
+  padding-top: 1cqw;
+}
+.colophon-white .credits {
+  font-size: .78cqw;
+  line-height: 1.5;
+}
+.colophon-white .credits b {
+  font-family: var(--font-slab);
+  font-size: .95cqw;
+  color: var(--black);
+  display: block;
+}
+.colophon-white .eye-seal img {
+  height: 3cqw;
+  width: auto;
+}
+
+/* ---------- Interactive Floating Autumn Leaves ---------- */
+.leaf-particle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 999;
+  width: 16px;
+  height: 16px;
+  border-radius: 0 100% 0 100%;
+  opacity: .8;
+  animation: fallLeaf 9s linear infinite;
+}
+@keyframes fallLeaf {
+  0% { transform: translate3d(0, -40px, 0) rotate(0deg); opacity: 0; }
+  10% { opacity: .85; }
+  90% { opacity: .85; }
+  100% { transform: translate3d(120px, 105vh, 0) rotate(480deg); opacity: 0; }
+}
+
+/* Red Stamp Sticker Dropped on Click */
+.user-stamp {
+  position: absolute;
+  pointer-events: none;
+  z-index: 50;
+  width: 70px;
+  height: 38px;
+  transform: translate(-50%, -50%) rotate(var(--rot, -12deg));
+  opacity: .92;
+  filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.4));
+  animation: stampSlam .18s cubic-bezier(.175,.885,.32,1.275);
+}
+@keyframes stampSlam {
+  0% { transform: translate(-50%, -50%) scale(2.2) rotate(var(--rot)); opacity: 0; }
+  100% { transform: translate(-50%, -50%) scale(1) rotate(var(--rot)); opacity: .92; }
+}
+
+/* Category Filter Bar */
+.filter-bar {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border: 2px solid var(--black);
+  padding: 8px 16px;
+  box-shadow: 4px 4px 0px var(--black);
+}
+.filter-tabs {
+  display: flex;
+  gap: 8px;
+}
+.filter-btn {
+  background: none;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-family: var(--font-typewriter);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--black);
+}
+.filter-btn.active {
+  background: var(--red);
+  color: #fff;
+  border-color: var(--black);
+}
+.filter-btn:hover:not(.active) {
+  border-color: var(--black);
+}
+.catalog-badge {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--red);
+  text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+
+<header class="top-nav">
+  <a href="../../index.html#zines">← Back to the book</a>
+  <div class="nav-logo">
+    <img src="images/eyecandy-red-logo.png" alt="EyeCandy A Visual Design Studio">
+  </div>
+  <div class="interactive-ctrls">
+    <button class="sound-btn" id="soundBtn" title="Play Ollie Snap">▶ Ollie Sound</button>
+    <button class="stamp-btn" id="stampBtn" title="Click anywhere to stamp the Eye logo">Stamp Eye Logo: ON</button>
+  </div>
+</header>
+
+<main>
+
+  <div class="filter-bar">
+    <div class="filter-tabs">
+      <button class="filter-btn active" onclick="jumpSpread('s1')">01 / Street Zine</button>
+      <button class="filter-btn" onclick="jumpSpread('s2')">02 / Decks & Completes</button>
+      <button class="filter-btn" onclick="jumpSpread('s3')">03 / Hardware & Lookbook</button>
+    </div>
+    <span class="catalog-badge">Autumn 2026 Edition · Sahr Rashid-Noah</span>
+  </div>
+
+  <!-- ==================== SPREAD 1: STREET CULTURE ZINE ==================== -->
+  <div class="scroll" id="spread-s1">
+    <section class="spread s1" aria-label="Street Culture Zine Spread">
+      <div class="spread-header-strip">
+        <span><b>EyeCandy Lab</b> · Issue 06</span>
+        <span>Fall Street Culture · New York City · <em>Page 01 — 02</em></span>
+      </div>
+
+      <div class="s1-grid">
+        <!-- Left Page: "STREET" -->
+        <div class="s1-left">
+          <h1 class="s1-title-huge">Street</h1>
+
+          <div class="s1-photo-zone">
+            <div>
+              <img src="images/skater-solo-nyc.jpg" alt="Skater in NYC with arm raised">
+            </div>
+            <div>
+              <img src="images/skaters-chinatown.jpg" alt="Two skaters bombing street in Chinatown">
+            </div>
+          </div>
+
+          <div class="box-1990s">
+            <h3>1990s Heritage</h3>
+            <p>
+              With a new decade, skateboarding changed yet again. Street skating became the dominant art form: 
+              the urban environment flooded with rule-breaking skaters embracing all handrails, stairs, and marble curbs.
+            </p>
+          </div>
+
+          <div class="s1-left-footer">
+            <span>CORE I: INTERACTION · FALL 2026</span>
+            <span>TOMPKINS / BROOKLYN BANKS</span>
+          </div>
+        </div>
+
+        <!-- Right Page: "CULTURE" (Red Spread) -->
+        <div class="s1-right">
+          <h1 class="s1-title-culture">Culture</h1>
+
+          <div class="s1-right-content">
+            <div class="s1-right-text">
+              <p>
+                The updated skating style and 'street culture' created a mix that influenced the next generation of skaters and graphic designers.
+              </p>
+              <p>
+                The rise in learning technical curb tricks brought the need for more durable and comfortable clothes: thick cotton fleeces, 
+                flannel jackets, big denim, and heavyweight 7-ply Canadian hard rock maple decks.
+              </p>
+              <p>
+                EyeCandy translates this seasonal street ethos into hardware and print objects designed to withstand asphalt and cold rain.
+              </p>
+            </div>
+
+            <div class="s1-right-gallery">
+              <img src="images/eyecandy-triptych-lookbook.jpg" alt="EyeCandy lookbook models in outerwear">
+              <img src="images/eyecandy-nuptse-editorial.jpg" alt="Model in yellow nuptse puffer">
+              <img src="images/eyecandy-sage-sean-ad.jpg" alt="Sage and Sean flash print ad">
+            </div>
+          </div>
+
+          <div class="s1-right-footer">
+            <span>EDITORIAL DIRECTION: SAHR</span>
+            <b>AUTUMN DROP · OCT 2026</b>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== SPREAD 2: COMPLETES & AUTUMN DECKS ==================== -->
+  <div class="scroll" id="spread-s2">
+    <section class="spread s2" aria-label="Skate Completes and Decks">
+      <div class="spread-header-strip">
+        <span><b>Hardgoods & Completes</b> · Canadian Maple</span>
+        <span>EyeCandy Technical Specifications · <em>Page 03 — 04</em></span>
+      </div>
+
+      <div class="s2-grid">
+        <!-- Left: Complete Skateboards with Interactive Hotspots -->
+        <div class="s2-left">
+          <div class="s2-header">
+            <h2>The <span>Completes</span></h2>
+            <p>Ready to roll street setups featuring cold-pressed Canadian maple, 54mm conical wheels, and raw aluminum trucks.</p>
+          </div>
+
+          <div class="complete-view-wrap">
+            <img src="images/eyecandy-skate-completes.jpg" alt="Three complete skateboards branded with EyeCandy graphics">
+            <!-- Clickable Interactive Hotspots -->
+            <button class="hotspot hs-deck" onclick="alert('DECK: 7-Ply Canadian Hard Rock Maple. Medium-High concave with responsive pop.')">Deck: 8.25"</button>
+            <button class="hotspot hs-truck" onclick="alert('TRUCKS: 149mm raw aluminum trucks with hollow chromoly steel kingpins.')">Trucks: 149</button>
+            <button class="hotspot hs-wheel" onclick="alert('WHEELS: 54mm 99DU high-rebound urethane conical wheels for rough street concrete.')">Wheels: 54mm</button>
+          </div>
+
+          <div class="specs-strip">
+            <div class="spec-box">
+              <small>Width</small>
+              <b>8.25" × 31.875"</b>
+            </div>
+            <div class="spec-box">
+              <small>Concave</small>
+              <b>Steep Autumn Kicks</b>
+            </div>
+            <div class="spec-box">
+              <small>Hardware</small>
+              <b>1" Black Phillips</b>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Autumn Plaid & Woodgrain Deck Series -->
+        <div class="s2-right">
+          <div>
+            <div class="deck-autumn-feature">
+              <img src="images/autumn-wood-decks-bench.jpg" alt="Polo Country and Element autumn wood decks on picnic bench">
+            </div>
+
+            <table class="deck-list-table">
+              <thead>
+                <tr>
+                  <th>Series Model</th>
+                  <th>Finish</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>01 / Red Dip Box Logo</td>
+                  <td>Crimson Dip / Full Silk Screen</td>
+                  <td>$68.00</td>
+                </tr>
+                <tr>
+                  <td>02 / The Eye Ocular</td>
+                  <td>Blonde Maple / Laser Etched</td>
+                  <td>$68.00</td>
+                </tr>
+                <tr>
+                  <td>03 / Autumn Plaid Country</td>
+                  <td>Dark Wood Stain / Green Plaid</td>
+                  <td>$72.00</td>
+                </tr>
+                <tr>
+                  <td>04 / Complete Street Setup</td>
+                  <td>Full Assembly Ready-to-Skate</td>
+                  <td>$135.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="font-size:.72cqw;color:var(--muted);border-top:1px solid var(--border);padding-top:.6cqw;display:flex;justify-content:space-between;">
+            <span>PRESSED IN RESIN-7 EPOXY</span>
+            <span>MADE IN NORTH AMERICA</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== SPREAD 3: HARDWARE & LIFESTYLE AD ==================== -->
+  <div class="scroll" id="spread-s3">
+    <section class="spread s3" aria-label="Hardware & Lifestyle Ad">
+      <div class="spread-header-strip">
+        <span><b>Hardware & Lifestyle</b> · Issue 06</span>
+        <span>Independent Trucks · Burners 54mm · <em>Page 05 — 06</em></span>
+      </div>
+
+      <div class="s3-grid">
+        <!-- Left: Wheels & Hardware -->
+        <div class="s3-left">
+          <div>
+            <h2>Street <span>Hardware</span></h2>
+            <div class="hardware-pair">
+              <div class="hw-card">
+                <img src="images/eyecandy-skate-wheel.jpg" alt="EyeCandy Burners 54mm black skate wheel">
+                <b>Burners 54mm</b>
+                <span>99DU Urethane / Eye Icon</span>
+              </div>
+              <div class="hw-card">
+                <img src="images/truck-wheel-closeup.jpg" alt="Close-up of Independent truck and Bones STF wheel">
+                <b>Truck Assembly</b>
+                <span>Stage 11 / Abec-7 Bearings</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tech-callout">
+            <strong>TECHNICAL NOTICE / COLD STREETS:</strong>
+            Wheels formulated at 99DU to provide optimal slide on cold concrete ledges while absorbing cracks and fallen autumn debris.
+          </div>
+        </div>
+
+        <!-- Right: Supreme / Sage & Sean Flash Ad Matting -->
+        <div class="s3-right">
+          <div class="ad-matting">
+            <img src="images/eyecandy-sage-sean-ad.jpg" alt="Sage Elsesser & Sean Pablo in EyeCandy Fall Outerwear with Red EyeCandy Box Logo">
+          </div>
+
+          <div class="colophon-white">
+            <div class="credits">
+              <b>EyeCandy Visual Design Studio</b>
+              Core I: Interaction · Project 5 Zine<br>
+              Art Direction & Design: Sahr Rashid-Noah
+            </div>
+            <div class="eye-seal">
+              <img src="images/eyecandy-red-eye.png" alt="Eye Logo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</main>
+
+<script>
+// 1. Smooth Jump Navigation
+function jumpSpread(id) {
+  const el = document.getElementById('spread-' + id);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+  }
+}
+
+// 2. Web Audio Skateboard Ollie Synthesizer
+let audioCtx = null;
+function playOllie() {
+  if (!audioCtx) {
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  }
+  const now = audioCtx.currentTime;
+
+  // Pop / Wood Snap
+  const snap = audioCtx.createOscillator();
+  const snapGain = audioCtx.createGain();
+  snap.type = 'triangle';
+  snap.frequency.setValueAtTime(140, now);
+  snap.frequency.exponentialRampToValueAtTime(30, now + 0.08);
+  snapGain.gain.setValueAtTime(0.8, now);
+  snapGain.gain.exponentialRampToValueAtTime(0.01, now + 0.08);
+  snap.connect(snapGain);
+  snapGain.connect(audioCtx.destination);
+  snap.start(now);
+  snap.stop(now + 0.09);
+
+  // Wheel Roll Noise Buffer
+  const bufferSize = audioCtx.sampleRate * 0.25;
+  const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+  const data = buffer.getChannelData(0);
+  for (let i = 0; i < bufferSize; i++) {
+    data[i] = (Math.random() * 2 - 1) * 0.15;
+  }
+  const noise = audioCtx.createBufferSource();
+  noise.buffer = buffer;
+  const filter = audioCtx.createBiquadFilter();
+  filter.type = 'bandpass';
+  filter.frequency.setValueAtTime(600, now);
+  const noiseGain = audioCtx.createGain();
+  noiseGain.gain.setValueAtTime(0.5, now + 0.05);
+  noiseGain.gain.exponentialRampToValueAtTime(0.001, now + 0.3);
+  noise.connect(filter);
+  filter.connect(noiseGain);
+  noiseGain.connect(audioCtx.destination);
+  noise.start(now + 0.05);
+}
+document.getElementById('soundBtn').addEventListener('click', playOllie);
+
+// 3. Click to Stamp EyeCandy Eye Logo Anywhere
+let stampingEnabled = true;
+const stampBtn = document.getElementById('stampBtn');
+stampBtn.addEventListener('click', () => {
+  stampingEnabled = !stampingEnabled;
+  stampBtn.textContent = stampingEnabled ? 'Stamp Eye Logo: ON' : 'Stamp Eye Logo: OFF';
+  stampBtn.style.background = stampingEnabled ? 'var(--red)' : '#666';
+});
+
+document.querySelectorAll('.spread').forEach(sp => {
+  sp.addEventListener('click', (e) => {
+    if (!stampingEnabled) return;
+    if (e.target.closest('button')) return; // ignore clicks on buttons
+
+    const rect = sp.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const stamp = document.createElement('img');
+    stamp.src = 'images/eyecandy-red-eye.png';
+    stamp.className = 'user-stamp';
+    stamp.style.left = x + 'px';
+    stamp.style.top = y + 'px';
+    const rot = (Math.random() * 30 - 15) + 'deg';
+    stamp.style.setProperty('--rot', rot);
+
+    sp.appendChild(stamp);
+    playOllie();
+  });
+});
+
+// 4. Subtle Falling Autumn Leaves
+(function() {
+  const colors = ['#d9531e', '#e89e24', '#c0392b', '#8e44ad', '#a04000'];
+  for (let i = 0; i < 10; i++) {
+    const leaf = document.createElement('div');
+    leaf.className = 'leaf-particle';
+    leaf.style.left = (Math.random() * 95) + 'vw';
+    leaf.style.background = colors[Math.floor(Math.random() * colors.length)];
+    leaf.style.animationDelay = (Math.random() * 8) + 's';
+    leaf.style.animationDuration = (Math.random() * 5 + 7) + 's';
+    document.body.appendChild(leaf);
+  }
+})();
+</script>
+
+</body>
+</html>
